@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "titulo": "Refrigeración",
+    "categoria": "Refrigeración",
+    "descripcion": "Instalación, mantenimiento y reparación de equipos de refrigeración y aire acondicionado.",
+    "imagen": "img/refrigeracion.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "Aire acondicionado",
+    "categoria": "Climatización",
+    "descripcion": "Instalación, limpieza, mantenimiento y reparación de equipos de aire acondicionado.",
+    "imagen": "img/aire-acondicionado.jpg"
+  },
+  {
+    "id": 3,
+    "titulo": "Albañilería",
+    "categoria": "Construcción",
+    "descripcion": "Trabajos de albañilería, reparaciones, mantenimiento y mejoras generales.",
+    "imagen": "img/albanileria.jpg"
+  },
+  {
+    "id": 4,
+    "titulo": "Herrería",
+    "categoria": "Herrería",
+    "descripcion": "Fabricación, reparación y mantenimiento de estructuras y trabajos de herrería.",
+    "imagen": "img/herreria.jpg"
+  },
+  {
+    "id": 5,
+    "titulo": "Carpintería",
+    "categoria": "Carpintería",
+    "descripcion": "Trabajos de carpintería, reparación, fabricación y mantenimiento.",
+    "imagen": "img/carpinteria.jpg"
+  },
+  {
+    "id": 6,
+    "titulo": "Pintura",
+    "categoria": "Pintura",
+    "descripcion": "Pintura interior y exterior, mantenimiento y renovación de ambientes.",
+    "imagen": "img/pintura.jpg"
+  },
+  {
+    "id": 7,
+    "titulo": "Automatización",
+    "categoria": "Automatización",
+    "descripcion": "Soluciones de automatización para hogares, comercios y diferentes espacios.",
+    "imagen": "img/automatizacion.jpg"
+  },
+  {
+    "id": 8,
+    "titulo": "Mantenimiento general",
+    "categoria": "Mantenimiento",
+    "descripcion": "Soluciones integrales de mantenimiento y reparación para hogares y comercios.",
+    "imagen": "img/mantenimiento.jpg"
+  }
+]
