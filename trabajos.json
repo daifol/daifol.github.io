@@ -1,58 +1,167 @@
 [
   {
     "id": 1,
-    "titulo": "Refrigeración",
+    "titulo": "Instalación de aire acondicionado",
     "categoria": "Refrigeración",
-    "descripcion": "Instalación, mantenimiento y reparación de equipos de refrigeración y aire acondicionado.",
-    "imagen": "img/refrigeracion.jpg"
+    "descripcion": "Instalación profesional de equipos de aire acondicionado.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/aire-acondicionado.jpg",
+    "disponible": true,
+    "destacado": true
   },
   {
     "id": 2,
-    "titulo": "Aire acondicionado",
-    "categoria": "Climatización",
-    "descripcion": "Instalación, limpieza, mantenimiento y reparación de equipos de aire acondicionado.",
-    "imagen": "img/aire-acondicionado.jpg"
+    "titulo": "Mantenimiento de aire acondicionado",
+    "categoria": "Refrigeración",
+    "descripcion": "Limpieza, mantenimiento y revisión general de equipos.",
+    "precio": 0,
+    "unidad": "servicio",
+    "imagen": "img/mantenimiento-aire.jpg",
+    "disponible": true,
+    "destacado": false
   },
   {
     "id": 3,
-    "titulo": "Albañilería",
-    "categoria": "Construcción",
-    "descripcion": "Trabajos de albañilería, reparaciones, mantenimiento y mejoras generales.",
-    "imagen": "img/albanileria.jpg"
+    "titulo": "Reparación de aire acondicionado",
+    "categoria": "Refrigeración",
+    "descripcion": "Diagnóstico y reparación de fallas en equipos de aire acondicionado.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/reparacion-aire.jpg",
+    "disponible": true,
+    "destacado": false
   },
   {
     "id": 4,
-    "titulo": "Herrería",
-    "categoria": "Herrería",
-    "descripcion": "Fabricación, reparación y mantenimiento de estructuras y trabajos de herrería.",
-    "imagen": "img/herreria.jpg"
+    "titulo": "Carga de refrigerante",
+    "categoria": "Refrigeración",
+    "descripcion": "Control de pérdidas, presurización y carga de refrigerante.",
+    "precio": 0,
+    "unidad": "servicio",
+    "imagen": "img/carga-refrigerante.jpg",
+    "disponible": true,
+    "destacado": false
   },
   {
     "id": 5,
-    "titulo": "Carpintería",
-    "categoria": "Carpintería",
-    "descripcion": "Trabajos de carpintería, reparación, fabricación y mantenimiento.",
-    "imagen": "img/carpinteria.jpg"
+    "titulo": "Reparación de heladeras",
+    "categoria": "Refrigeración",
+    "descripcion": "Diagnóstico y reparación de heladeras y sistemas de refrigeración.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/heladera.jpg",
+    "disponible": true,
+    "destacado": true
   },
   {
     "id": 6,
-    "titulo": "Pintura",
-    "categoria": "Pintura",
-    "descripcion": "Pintura interior y exterior, mantenimiento y renovación de ambientes.",
-    "imagen": "img/pintura.jpg"
+    "titulo": "Mantenimiento de heladeras",
+    "categoria": "Refrigeración",
+    "descripcion": "Revisión, mantenimiento y reparación de sistemas de refrigeración.",
+    "precio": 0,
+    "unidad": "servicio",
+    "imagen": "img/mantenimiento-heladera.jpg",
+    "disponible": true,
+    "destacado": false
   },
   {
     "id": 7,
-    "titulo": "Automatización",
-    "categoria": "Automatización",
-    "descripcion": "Soluciones de automatización para hogares, comercios y diferentes espacios.",
-    "imagen": "img/automatizacion.jpg"
+    "titulo": "Trabajos de albañilería",
+    "categoria": "Albañilería",
+    "descripcion": "Reparaciones, mantenimiento y trabajos generales de albañilería.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/albanileria.jpg",
+    "disponible": true,
+    "destacado": true
   },
   {
     "id": 8,
+    "titulo": "Trabajos de herrería",
+    "categoria": "Herrería",
+    "descripcion": "Fabricación, reparación y mantenimiento de estructuras metálicas.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/herreria.jpg",
+    "disponible": true,
+    "destacado": true
+  },
+  {
+    "id": 9,
+    "titulo": "Reparación de puertas",
+    "categoria": "Herrería",
+    "descripcion": "Reparación, soldadura y mantenimiento de puertas metálicas.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/puertas.jpg",
+    "disponible": true,
+    "destacado": false
+  },
+  {
+    "id": 10,
+    "titulo": "Trabajos de carpintería",
+    "categoria": "Carpintería",
+    "descripcion": "Fabricación, reparación y mantenimiento de trabajos de carpintería.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/carpinteria.jpg",
+    "disponible": true,
+    "destacado": false
+  },
+  {
+    "id": 11,
+    "titulo": "Trabajos de pintura",
+    "categoria": "Pintura",
+    "descripcion": "Pintura interior y exterior para viviendas, comercios y oficinas.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/pintura.jpg",
+    "disponible": true,
+    "destacado": false
+  },
+  {
+    "id": 12,
+    "titulo": "Automatización",
+    "categoria": "Automatización",
+    "descripcion": "Soluciones de automatización para hogares, comercios y establecimientos.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/automatizacion.jpg",
+    "disponible": true,
+    "destacado": true
+  },
+  {
+    "id": 13,
+    "titulo": "Automatización de iluminación",
+    "categoria": "Automatización",
+    "descripcion": "Control automático de luces y dispositivos eléctricos.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/iluminacion.jpg",
+    "disponible": true,
+    "destacado": false
+  },
+  {
+    "id": 14,
+    "titulo": "Control remoto de dispositivos",
+    "categoria": "Automatización",
+    "descripcion": "Control remoto de dispositivos desde celular o computadora.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/control-remoto.jpg",
+    "disponible": true,
+    "destacado": false
+  },
+  {
+    "id": 15,
     "titulo": "Mantenimiento general",
     "categoria": "Mantenimiento",
-    "descripcion": "Soluciones integrales de mantenimiento y reparación para hogares y comercios.",
-    "imagen": "img/mantenimiento.jpg"
+    "descripcion": "Mantenimiento y reparación general para viviendas y comercios.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "imagen": "img/mantenimiento.jpg",
+    "disponible": true,
+    "destacado": true
   }
 ]
