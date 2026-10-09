@@ -76,9 +76,7 @@
     "unidad": "presupuesto",
     "disponible": true,
     "destacado": true,
-    "imagenes": [
-      "img/aire/1.jpg"
-    ]
+    "imagenes": []
   },
   {
     "id": 6,
