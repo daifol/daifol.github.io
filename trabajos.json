@@ -1,3 +1,4 @@
+
 [
   {
     "id": 1,
@@ -101,6 +102,22 @@
       "img/pintura/2.jpeg",
       "img/pintura/3.jpeg",
       "img/pintura/4.jpeg"
+    ]
+  },
+  {
+    "id": 7,
+    "titulo": "Reparación de Heladeras",
+    "categoria": "Heladeras",
+    "descripcion": "Diagnóstico, reparación y mantenimiento de heladeras familiares y comerciales. Detección de fugas, reparación del circuito frigorífico y carga de refrigerante cuando corresponda.",
+    "precio": 0,
+    "unidad": "presupuesto",
+    "disponible": true,
+    "destacado": true,
+    "imagenes": [
+      "img/heladeras/1.jpg",
+      "img/heladeras/2.jpg",
+      "img/heladeras/3.jpg",
+      "img/heladeras/4.jpg"
     ]
   }
 ]
