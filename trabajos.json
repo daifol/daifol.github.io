@@ -77,7 +77,10 @@
     "disponible": true,
     "destacado": true,
     "imagenes": [
-      "img/aire/1.jpg"
+      "img/aire/1.jpg",
+      "img/aire/2.jpg",
+      "img/aire/3.jpg",
+      "img/aire/4.jpg"
     ]
   },
   {
