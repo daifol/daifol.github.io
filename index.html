@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -248,134 +248,18 @@ Automatización Inteligente
 Galería
 </h2>
 
+<!--
+La galería se carga automáticamente
+desde trabajos.json
+-->
 
+<div id="galeria-dinamica">
 
-<!-- ALBAÑILERÍA -->
-
-<h3>
-🔨 Albañilería
-</h3>
-
-<div class="gallery">
-
-<img src="img/albanileria/obra1.jpeg" alt="Trabajo de albañilería">
-
-<img src="img/albanileria/obra2.jpeg" alt="Trabajo de albañilería">
-
-<img src="img/albanileria/obra3.jpeg" alt="Trabajo de albañilería">
-
-<img src="img/albanileria/obra4.jpeg" alt="Trabajo de albañilería">
+<p>
+Cargando trabajos...
+</p>
 
 </div>
-
-
-
-<!-- HERRERÍA -->
-
-<h3>
-⚙️ Herrería
-</h3>
-
-<div class="gallery">
-
-<img src="img/herreria/1.jpeg" alt="Trabajo de herrería">
-
-<img src="img/herreria/2.jpeg" alt="Trabajo de herrería">
-
-<img src="img/herreria/3.jpeg" alt="Trabajo de herrería">
-
-<img src="img/herreria/4.jpeg" alt="Trabajo de herrería">
-
-</div>
-
-
-
-<!-- PINTURA -->
-
-<h3>
-🎨 Pintura
-</h3>
-
-<div class="gallery">
-
-<img src="img/pintura/1.jpeg" alt="Trabajo de pintura">
-
-<img src="img/pintura/2.jpeg" alt="Trabajo de pintura">
-
-<img src="img/pintura/3.jpeg" alt="Trabajo de pintura">
-
-<img src="img/pintura/4.jpeg" alt="Trabajo de pintura">
-
-</div>
-
-
-
-<!-- CARPINTERÍA -->
-
-<h3>
-🪚 Carpintería
-</h3>
-
-<div class="gallery">
-
-<img src="img/carpinteria/1.jpeg" alt="Trabajo de carpintería">
-
-<img src="img/carpinteria/2.jpeg" alt="Trabajo de carpintería">
-
-<img src="img/carpinteria/3.jpeg" alt="Trabajo de carpintería">
-
-<img src="img/carpinteria/4.jpeg" alt="Trabajo de carpintería">
-
-<img src="img/carpinteria/5.jpeg" alt="Trabajo de carpintería">
-
-<img src="img/carpinteria/6.jpeg" alt="Trabajo de carpintería">
-
-<img src="img/carpinteria/7.jpeg" alt="Trabajo de carpintería">
-
-<img src="img/carpinteria/8.jpeg" alt="Trabajo de carpintería">
-
-</div>
-
-
-
-<!-- AUTOMATIZACIÓN -->
-
-<h3>
-🤖 Automatización
-</h3>
-
-<div class="gallery">
-
-<img src="img/automatizacion/1.jpg" alt="Proyecto de automatización">
-
-<img src="img/automatizacion/2.jpg" alt="Proyecto de automatización">
-
-<img src="img/automatizacion/3.jpg" alt="Proyecto de automatización">
-
-<img src="img/automatizacion/4.jpg" alt="Proyecto de automatización">
-
-</div>
-
-
-
-<!-- REFRIGERACIÓN -->
-
-<h3>
-❄️ Refrigeración
-</h3>
-
-<div class="gallery">
-
-<img src="img/refrigeracion/1.jpeg" alt="Instalación de aire acondicionado">
-
-<img src="img/refrigeracion/2.jpeg" alt="Mantenimiento de aire acondicionado">
-
-<img src="img/refrigeracion/3.jpeg" alt="Reparación de aire acondicionado">
-
-<img src="img/refrigeracion/4.jpeg" alt="Trabajo de refrigeración">
-
-</div>
-
 
 </section>
 
@@ -391,9 +275,6 @@ Galería
 Videos de Trabajos Realizados
 </h2>
 
-
-
-<!-- VIDEOS -->
 
 <div class="video-grid">
 
@@ -577,25 +458,6 @@ Tu navegador no soporta videos HTML5.
 </video>
 
 
-
-<!--
-PARA AGREGAR MÁS VIDEOS:
-
-Copiar este bloque:
-
-<video controls preload="metadata">
-
-<source
-src="videos/video13.mp4"
-type="video/mp4"
->
-
-</video>
-
-Luego subir video13.mp4
-a la carpeta videos/
--->
-
 </div>
 
 </section>
@@ -693,7 +555,172 @@ Enviar por WhatsApp
 
 
 <!-- =========================
-     JAVASCRIPT
+     GALERÍA DESDE JSON
+========================= -->
+
+<script>
+
+async function cargarTrabajos() {
+
+    const contenedor = document.getElementById("galeria-dinamica");
+
+    try {
+
+        const respuesta = await fetch("trabajos.json");
+
+        if (!respuesta.ok) {
+            throw new Error("No se pudo cargar trabajos.json");
+        }
+
+        const trabajos = await respuesta.json();
+
+        contenedor.innerHTML = "";
+
+        trabajos.forEach(trabajo => {
+
+            if (trabajo.disponible === false) {
+                return;
+            }
+
+            /*
+             * Título de la categoría
+             */
+
+            const titulo = document.createElement("h3");
+
+            let icono = "🔧";
+
+            if (trabajo.categoria === "Albañilería") {
+                icono = "🔨";
+            }
+
+            if (trabajo.categoria === "Herrería") {
+                icono = "⚙️";
+            }
+
+            if (trabajo.categoria === "Pintura") {
+                icono = "🎨";
+            }
+
+            if (trabajo.categoria === "Carpintería") {
+                icono = "🪚";
+            }
+
+            if (trabajo.categoria === "Automatización") {
+                icono = "🤖";
+            }
+
+            if (
+                trabajo.categoria === "Refrigeración" ||
+                trabajo.categoria === "Aire acondicionado"
+            ) {
+                icono = "❄️";
+            }
+
+            titulo.textContent =
+                icono + " " + trabajo.titulo;
+
+            contenedor.appendChild(titulo);
+
+
+            /*
+             * Descripción
+             */
+
+            if (trabajo.descripcion) {
+
+                const descripcion = document.createElement("p");
+
+                descripcion.textContent =
+                    trabajo.descripcion;
+
+                contenedor.appendChild(descripcion);
+
+            }
+
+
+            /*
+             * Galería de imágenes
+             */
+
+            const gallery = document.createElement("div");
+
+            gallery.className = "gallery";
+
+
+            if (
+                Array.isArray(trabajo.imagenes) &&
+                trabajo.imagenes.length > 0
+            ) {
+
+                trabajo.imagenes.forEach((imagen, index) => {
+
+                    const img = document.createElement("img");
+
+                    img.src = imagen;
+
+                    img.alt =
+                        trabajo.titulo +
+                        " - Trabajo " +
+                        (index + 1);
+
+                    img.loading = "lazy";
+
+                    /*
+                     * Si una imagen no existe,
+                     * simplemente se oculta.
+                     */
+
+                    img.onerror = function() {
+
+                        this.style.display = "none";
+
+                    };
+
+                    gallery.appendChild(img);
+
+                });
+
+            }
+
+
+            contenedor.appendChild(gallery);
+
+        });
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        contenedor.innerHTML = `
+
+            <p>
+            No se pudieron cargar los trabajos.
+            </p>
+
+        `;
+
+    }
+
+}
+
+
+/*
+ * Iniciar carga
+ */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    cargarTrabajos
+);
+
+</script>
+
+
+
+<!-- =========================
+     JAVASCRIPT PRINCIPAL
 ========================= -->
 
 <script src="script.js"></script>
@@ -702,3 +729,36 @@ Enviar por WhatsApp
 </body>
 
 </html>
+```
+
+### Ahora necesitamos actualizar el `trabajos.json`
+
+Como tu HTML ya nos confirmó que también tenés:
+
+```text
+img/pintura/1.jpeg
+img/pintura/2.jpeg
+img/pintura/3.jpeg
+img/pintura/4.jpeg
+```
+
+y:
+
+```text
+img/refrigeracion/1.jpeg
+img/refrigeracion/2.jpeg
+img/refrigeracion/3.jpeg
+img/refrigeracion/4.jpeg
+```
+
+podemos dejar **las 6 categorías funcionando desde el JSON**.
+
+Después, si agregás por ejemplo:
+
+```text
+img/herreria/5.jpeg
+```
+
+solo agregamos esa imagen al JSON y **no tocamos más el HTML**.
+
+**Importante:** cuando subas este `index.html` y el `trabajos.json`, hacé una actualización forzada del navegador con **Ctrl + F5** para evitar que GitHub Pages te muestre la versión anterior.
